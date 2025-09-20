@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="demo">
+        <p id="kxa">Hello</p>
+    </div>
+     
+    <script>
+        let element = document.querySelector("#demo");
+        console.log(element.innerHTML);
+        console.log(element.outerHTML);
+
+        element.innerHTML = "<h1>This is my new heading</h1> <p>This is my para</p>";
+        console.log(element.innerHTML);
+
+        element.outerHTML = "<div id='demo'> <h1>This is my new heading</h1> <p>This is my para</p> </div>";
+        console.log(element.outerHTML);
+
+
+    </script>
+</body>
+</html>

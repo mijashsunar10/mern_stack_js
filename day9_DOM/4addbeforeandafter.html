@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        Hello jee
+        <div id="mydiv">
+            <p>First</p>
+            <h1>Second</h1>
+            <p>Third</p>
+        </div>
+    </div>\
+
+    <script>
+        let mydiv = document.querySelector('#mydiv');
+
+mydiv
+
+let newElement = document.createElement('span');
+
+// newElement
+
+newElement.textContent = "Hi my name is anmol";
+// 'Hi my name is anmol'
+
+// newElement
+// <span>​Hi my name is anmol​</span>​
+
+mydiv.insertAdjacentElement('beforebegin',newElement);
+    </script>
+    
+</body>
+</html>

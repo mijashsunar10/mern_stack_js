@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="fdiv" style="background-color: aqua; padding: 2rem;">
+        FIrst Div
+        <p id="fpara" style="background-color: green; padding: 1rem;">
+            Second div
+            <div id="spara" style="background-color: yellow; padding:1rem">
+                Seocnd para
+                <p id="ppara" style="background-color:orange; padding:0.2rem;; ">Lorem, ipsum dolor.
+                </p>
+                
+            </div>
+        </p>
+    </div>
+
+    <script>
+        //method 1
+        let paraElement = document.getElementById('spara');
+        paraElement.style.backgroundColor = 'blue';
+        paraElement.style.color = 'white';
+        
+        //method2
+        let secondElement = document.getElementById('ppara');
+        secondElement.style.cssText = "background-color:black;text-white";
+        
+        let firstElement = document.getElementById('fpara');
+        firstELement.setAttribute('class','divclass');      
+
+        let last = document.getElementById('fdiv');
+        last.setAttribute("style","background-color:red;");
+        </script>
+</body>
+</html>
