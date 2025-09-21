@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="mybtn">Click me</button>
+
+    <script>
+
+        let button = document.getElementById("mybtn");
+
+        button.addEventListener("click",function()
+        {
+            button.style.backgroundColor = 'red';
+            button.style.color = 'white';
+            console.log("Button is clicked");
+
+            setTimeout(function()
+            {
+                 button.style.backgroundColor = '';
+                button.style.color = '';
+                console.log("Button is Unclicked");
+                
+            },3000);
+
+        });
+
+// Actual way to show that 
+    </script>
+
+    
+</body>
+</html>

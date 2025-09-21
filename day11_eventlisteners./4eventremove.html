@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">
+        Click meeeeeeeeeeeeeeeeeeeeeeeeeeeeeee  
+    </button>
+    
+    <script>
+        let button = document.getElementById('btn');
+
+        function event1()
+        {
+            button.style.backgroundColor = "red";
+            button.style.color = "white";
+            console.log("Button Clicked");
+
+
+        }
+
+        button.addEventListener("click",event1);
+
+        setTimeout(function()
+        {
+            button.removeEventListener("click",event1);
+             button.style.backgroundColor = "";
+            button.style.color = "";
+            console.log("Button Unclicked");
+
+            setTimeout(function()
+                {
+                    button.addEventListener("click",event1);
+                    console.log("Ebutton clciked again")
+                },1000);
+
+            
+        },3000); //Again button can be clicked buton we want as many times we cant to click and unclick;
+    </script>
+</body>
+</html>

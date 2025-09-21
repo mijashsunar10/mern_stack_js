@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <script>
+
+        // reflow = process of calculating a position, dimension calulating the element which we want to render in the UI.it is computational intensive task.
+        // repaint = porcess of displaying element pixel / pixel. faster
+        // Code 1
+
+        // In code on we do 100 times reflow and 100 times repaint.
+
+        const t1 = performance.now();
+
+        for(let i = 0; i < 100; i++) {
+            let para = document.createElement('p');
+            para.textContent = "This is para " + i;
+            document.body.appendChild(para); // ✅ append the element, not a string
+        }
+
+        const t2 = performance.now();
+
+        
+
+        console.log("Total time taken by code is: " + (t2 - t1) + " ms");
+
+        // In code 2 just one reflow and 1repaint
+        const t3 = performance.now();
+
+        let mydiv = document.createElement('div');
+
+        for(let i=0; i<100;i++)
+        {
+            let para = document.createElement('p');
+            para.textContent = "This is para" + i;
+            mydiv.appendChild(para); //div ma para add garda UI ma show garni haina
+        }
+        document.body.appendChild(mydiv); //here reflow also repaint also 
+
+
+        const t4 = performance.now();
+        console.log("Time taken is :" + (t4-t3));
+
+
+
+        //best code
+
+          const t5 = performance.now();
+
+        let fragment = document.createDocumentFragment();
+
+        for(let i =1; i<100; i++)
+        {
+
+            let para = document.createElement('p');
+            para.textContent = "This is para" + i;
+            mydiv.appendChild(para);
+
+        }
+        document.body.appendChild(fragment);
+
+          const t6 = performance.now();
+          console.log("Time taken:"+(t6-t5));
+
+        //   SOmetime code2 is faster sometime code3 is faster
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preventing Default Behavior</title>
+</head>
+<body>
+  <a href="https://nepalesetrekking.com" id="myLink">Click Me</a>
+
+  <script>
+    const link = document.getElementById('myLink');
+
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      console.log('Default behavior prevented');
+    });
+  </script>
+</body>
+</html>

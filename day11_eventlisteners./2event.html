@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listeners Example</title>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Type something...">
+
+  <script>
+    const input = document.getElementById('myInput');
+    input.addEventListener('input',function(event){ //The input event fires every time you type, delete, or change the text inside the input box.
+        console.log(event.target.value);
+        //event.target = the element that triggered the event → here, it’s your <input>..value = the current text inside that input box.
+    } );
+
+    //function(event) is for when you need info about the event (like the input value, clicked element, pressed key).
+    //  function() is fine only if you don’t care about the event details.
+  </script>
+
+
+</body>
+</html>

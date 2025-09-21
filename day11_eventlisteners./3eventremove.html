@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="myButton">
+        CLick me
+    </button>
+
+    <script>
+        let button = document.getElementById('myButton');
+
+        function handleButtonClick()
+        {
+            button.style.backgroundColor = "red";
+            button.style.color = "white";
+            console.log("Button Clicked");
+            // alert('Button Clicked');
+
+        }
+
+        // button.addEventListener("click",handleButtonClick()); This is wrong
+            button.addEventListener('click',handleButtonClick);
+
+            setTimeout(function()
+        {
+            button.removeEventListener('click',handleButtonClick);
+            button.style.backgroundColor = '';
+            button.style.color = '';
+            alert('Event removed')
+        },5000);
+
+// The button is not clickable again when event is removed now we need to solve the error
+
+    </script>
+    
+</body>
+</html>
