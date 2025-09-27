@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Synchronous code: If the flow of  code executes at the same time without making us wait then it is known as synchronous code -->
+     <script>
+        console.log("hi");
+        console.log("love");
+        console.log("anmol");
+     </script>
+
+     <!-- Ascynchrounous code:The code wirtten might not execute immediately . The flow of code might nor excecute at the same time. -->
+
+     <script>
+        console.log("FIrst request on call stack");
+
+        setTimeout(function()
+        {
+            console.log("k xa dost")
+        },1000);
+
+        console.log("Last request");
+     </script>
+
+     <!-- javascript is the single threaded .It can do one thing at a time but in the browser or (node.js) you can see multiple things happening at oncs animation , clicks,timers,Api calss .
+      This illusion of miltitaksing is made possible due to event loop. -->
+      <!-- This cycle is what allows JS to handle asynchronous tasks without freezing. -->
+
+
+    
+</body>
+</html>
