@@ -1,0 +1,23 @@
+
+import './App.css'
+import UserCard from './components/UserCard'
+
+function App() {
+ 
+  return (
+    <>
+    <div className='container'>
+
+    <UserCard/>
+    <UserCard/>
+    <UserCard/>
+        
+    </div>
+    {/* <div>
+       there cant be two div
+    </div> */}
+    </>
+  )
+}
+
+export default App
