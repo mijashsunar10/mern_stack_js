@@ -8,7 +8,7 @@ const UserCard = (props) => {
 
         <p id='user-title'>{props.name}</p>
         {/* <img id='user-img' src="../assets/sping.png"/> This is not the way we need to import it */}
-                <img id='user-img' src={props.image}/>
+        <img id='user-img' src={props.image}/>
         <p id='user-desc'>{props.desc}</p>
 
 
