@@ -5,6 +5,10 @@ for routing to work
 # npm install react-hook-form@latest
 Use less code and make very powerful form
 
+# npm install @reduxjs/toolkit
+
+# npm install react-redux
+
 
 
 
