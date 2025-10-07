@@ -19,4 +19,8 @@ Express
 
 <!-- NODEMON AAILE CHAINNA -->
 # npm install nodemon 
+
+#  //dev nam ko script add garni so we an run nodemon in pacakge.json
+
+ # "dev": "nodemon index.js", 
 <!-- Automaticaly code restars so nodemon us used -->

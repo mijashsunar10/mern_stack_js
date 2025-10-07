@@ -1,4 +1,3 @@
-//includgin express module and initializing the app
 
 const express = require('express');//needed to import express
 const app = express();//app variable ma express ko instance store garxa
