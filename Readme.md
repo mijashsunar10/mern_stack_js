@@ -11,5 +11,12 @@ Use less code and make very powerful form
 
 
 
+Express
 
+# npm init -y
 
+# npm install express
+
+<!-- NODEMON AAILE CHAINNA -->
+# npm install nodemon 
+<!-- Automaticaly code restars so nodemon us used -->
