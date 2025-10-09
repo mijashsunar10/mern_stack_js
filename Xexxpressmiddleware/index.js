@@ -11,31 +11,34 @@
 
 //middleware - logging, auth, validation
 //creation of the middleware
-const loggingMiddleware = function(req,res,next)
-{
-   console.log('Login is made');
-    next();
-}
-app.use(loggingMiddleware);//application ke under load kardiya
+// const loggingMiddleware = function(req,res,next)
+// {
+//    console.log('Login is made');
+//     next();
+// }
+// app.use(loggingMiddleware);//application ke under load kardiya
 
-const authMiddleware = function(req,res,next)
-{
-    console.log('Auth is done');
-    // res.send('Auth is done');//response patha diya so next call haina
-     next(); //if next is not done then next middleware is not done
-}
-app.use(authMiddleware);//application ke under load kardiya
+// const authMiddleware = function(req,res,next)
+// {
+//     console.log('Auth is done');
+//     // res.send('Auth is done');//response patha diya so next call haina
+//      next(); //if next is not done then next middleware is not done
+// }
+// app.use(authMiddleware);//application ke under load kardiya
 
-const validationMiddleware = function(req,res,next)
-{
-    console.log('Validation is done');
-     next();
-}
-app.use(validationMiddleware);//application ke under load kardiya
+// const validationMiddleware = function(req,res,next)
+// {
+//     console.log('Validation is done');
+//      next();
+// }
+// app.use(validationMiddleware);//application ke under load kardiya
 
 
 //order is very important in middleware
 
+
+const route = require('./routes/route');
+app.use('/api',route);//route middleware
 
 
  app.get('/', (req, res) => {
